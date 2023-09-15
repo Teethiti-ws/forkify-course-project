@@ -1,4 +1,4 @@
-import { async } from 'regenerator-runtime';
+// import { async } from 'regenerator-runtime';
 import * as model from './model';
 import { MODAL_CLOSE_SEC } from './config.js';
 import recipeView from './view/recipeView.js';
@@ -8,8 +8,8 @@ import paginationView from './view/paginationView.js';
 import bookmarksView from './view/bookmarksView.js';
 import addRecipeView from './view/addRecipeView.js';
 
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
 
 // if (module.hot) {
 //   module.hot.accept();
