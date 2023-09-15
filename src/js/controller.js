@@ -1,4 +1,3 @@
-// import { async } from 'regenerator-runtime';
 import * as model from './model';
 import { MODAL_CLOSE_SEC } from './config.js';
 import recipeView from './view/recipeView.js';
@@ -7,9 +6,6 @@ import resultsView from './view/resultsView.js';
 import paginationView from './view/paginationView.js';
 import bookmarksView from './view/bookmarksView.js';
 import addRecipeView from './view/addRecipeView.js';
-
-// import 'core-js/stable';
-// import 'regenerator-runtime/runtime';
 
 // if (module.hot) {
 //   module.hot.accept();
@@ -53,7 +49,6 @@ const controlSearchResult = async function () {
     await model.loadSearchResults(query);
 
     // 3.Render results
-    // resultsView.render(model.state.search.results);
     resultsView.render(model.getSearchResultsPage());
 
     // 4.Render initial pagination buttons
@@ -76,9 +71,7 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 
   // Update the recipe view
-  // recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
-  // console.log(model.state.recipe);
 };
 
 const controlAddBookmark = function () {

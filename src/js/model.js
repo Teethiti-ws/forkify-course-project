@@ -1,6 +1,4 @@
-// import { asnyc, async } from 'regenerator-runtime';
 import { API_URL, RES_PER_PAGE, KEY } from './config.js';
-// import { getJSON, sendJSON } from './helper.js';
 import { AJAX } from './helper.js';
 
 export const state = {
@@ -61,7 +59,6 @@ export const loadSearchResults = async function (query) {
         ...(rec.key && { key: rec.key }),
       };
     });
-    // console.log(state.search.results);
 
     state.search.page = 1;
   } catch (err) {
@@ -125,7 +122,6 @@ init();
 const clearBookmarks = function () {
   localStorage.clear('bookmarks');
 };
-// clearBookmarks();
 
 export const uploadRecipe = async function (newRecipe) {
   try {
